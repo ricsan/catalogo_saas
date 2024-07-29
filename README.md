@@ -6,9 +6,10 @@ Geralmente um SaaS é projetado para que cada ponto de processamento seja capaz 
 
 O propósito principal do CSaaS é servir ao sitema todas as configurações necessárias para que ele funcione corretamente, em qualquer servidor, em qualquer infra, sem necessidade de builds específicos ou configurações em arquivos para cada conta ou tenant.
 
-Outro propósito é facilitar a criação de novas contas em sistemas para nvos clientes ou clientes já existente, podendo ser feita via UI ou automatizada pela API.
+Outro propósito é facilitar a criação de novas contas em sistemas, para novos clientes ou clientes já existentes, podendo ser feita via UI administrativa ou automatizada pela API.
 
 ## Configurações comuns
+
 - Domínio principal
 - String de conexão
 - Tipo de autenticação
@@ -16,7 +17,7 @@ Outro propósito é facilitar a criação de novas contas em sistemas para nvos 
 - Configurações de armazenamento (AWS S3)
 - Estrutura de pastas
 
-  O CSaaS foi projetado para ser flexível e aceitar qualquer tipo e quantidade de configuração.
+O CSaaS foi projetado para ser flexível e aceitar qualquer tipo e quantidade de configuração.
 
 ## Versão beta (MVP)
 
