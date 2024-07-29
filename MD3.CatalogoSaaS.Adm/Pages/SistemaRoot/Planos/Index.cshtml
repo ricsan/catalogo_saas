@@ -1,0 +1,55 @@
+﻿@page
+@model MD3.CatalogoSaaS.Adm.Pages.SistemaRoot.Planos.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Planos do sistema</h1>
+
+<p>
+    <a asp-page="Create" asp-route-sistemaId="@ViewData["sistemaId"]">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PlanoDoSistema[0].Sistema)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PlanoDoSistema[0].Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PlanoDoSistema[0].Descricao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PlanoDoSistema[0].Ativo)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.PlanoDoSistema)
+        {
+            <tr>
+                <td>
+                    @($"{item.Sistema.Nome} ({item.Sistema.CodigoInterno})")
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Descricao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ativo)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.Id" asp-route-sistemaId="@ViewBag.sistemaId">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.Id" asp-route-sistemaId="@ViewBag.sistemaId">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.Id" asp-route-sistemaId="@ViewBag.sistemaId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

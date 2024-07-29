@@ -1,0 +1,45 @@
+﻿@page
+@model MD3.CatalogoSaaS.Adm.Pages.SistemaRoot.Parametros.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>ParametroDoSistema</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ParametroDoSistema.Sistema_Id" class="control-label"></label>
+                @*<select asp-for="ParametroDoSistema.Sistema_Id" class ="form-control" asp-items="ViewBag.Sistema_Id"></select>*@
+                <input hidden asp-for="ParametroDoSistema.Sistema_Id" value="@ViewBag.sistemaId" />
+                <span class="form-control">@ViewBag.Sistema</span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ParametroDoSistema.CodigoUnico" class="control-label"></label>
+                <input asp-for="ParametroDoSistema.CodigoUnico" class="form-control" />
+                <span asp-validation-for="ParametroDoSistema.CodigoUnico" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="ParametroDoSistema.NivelDeConta" /> @Html.DisplayNameFor(model => model.ParametroDoSistema.NivelDeConta)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index" asp-route-sistemaId="@ViewBag.sistemaId">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

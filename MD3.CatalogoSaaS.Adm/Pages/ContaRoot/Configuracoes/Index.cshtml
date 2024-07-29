@@ -1,0 +1,53 @@
+﻿@page
+@model MD3.CatalogoSaaS.Adm.Pages.ContaRoot.Configuracoes.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Configurações da conta</h1>
+
+<p>
+    <a asp-page="Create" asp-route-contaId="@ViewBag.contaId">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ConfiguracaoDeConta[0].Conta)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ConfiguracaoDeConta[0].Parametro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ConfiguracaoDeConta[0].Valor)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.ConfiguracaoDeConta)
+        {
+            <tr>
+                <td>
+                    @($"{item.Conta.Id} ({item.Conta.Tenant.Nome})")
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Parametro.CodigoUnico)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Valor)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-parametroId="@item.Parametro_Id" asp-route-contaId="@ViewBag.contaId">Edit</a> |
+                    <a asp-page="./Details" asp-route-parametroId="@item.Parametro_Id" asp-route-contaId="@ViewBag.contaId">Details</a> |
+                    <a asp-page="./Delete" asp-route-parametroId="@item.Parametro_Id" asp-route-contaId="@ViewBag.contaId">Delete</a>
+
+                    @*@Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })*@
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

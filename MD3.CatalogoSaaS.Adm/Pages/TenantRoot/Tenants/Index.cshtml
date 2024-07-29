@@ -1,0 +1,61 @@
+﻿@page
+@model MD3.CatalogoSaaS.Adm.Pages.TenantRoot.Tenants.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Tenants</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Tenant[0].Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tenant[0].IdGeral)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tenant[0].Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tenant[0].Pai_Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tenant[0].Contas)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Tenant)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IdGeral)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Pai_Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Contas)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

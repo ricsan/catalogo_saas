@@ -1,0 +1,37 @@
+﻿@page
+@model MD3.CatalogoSaaS.Adm.Pages.SistemaRoot.Parametros.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>ParametroDoSistema</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParametroDoSistema.Sistema)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParametroDoSistema.Sistema.Nome)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParametroDoSistema.CodigoUnico)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParametroDoSistema.CodigoUnico)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParametroDoSistema.NivelDeConta)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParametroDoSistema.NivelDeConta)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.ParametroDoSistema?.Id" asp-route-sistemaId="@ViewBag.sistemaId">Edit</a> |
+    <a asp-page="./Index" asp-route-sistemaId="@ViewBag.sistemaId">Back to List</a>
+</div>

@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MD3.CatalogoSaaS.Model", "MD3.CatalogoSaaS.Model\MD3.CatalogoSaaS.Model.csproj", "{17BB8AB6-D307-4A1F-9D1E-8466BE51A0A3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MD3.CatalogoSaaS.Data.EF", "MD3.CatalogoSaaS.Data.EF\MD3.CatalogoSaaS.Data.EF.csproj", "{73E6DDAB-26FD-499C-815C-76796762B288}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra", "Infra", "{BED927F5-5B50-426F-9D08-E06A0AC95C1D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{2A28F5B9-98B2-4930-A839-C464A465F218}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service", "Service", "{99098519-2473-4522-99A2-1820392B7B81}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MD3.CatalogoSaaS.API", "MD3.CatalogoSaaS.API\MD3.CatalogoSaaS.API.csproj", "{DD65C106-ED2D-4ADD-846A-45E6717CEB59}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{01A1CFE3-7E7A-435E-BB9D-F79492F3FF51}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MD3.CatalogoSaaS.Adm", "MD3.CatalogoSaaS.Adm\MD3.CatalogoSaaS.Adm.csproj", "{9CAAF1D2-5601-4297-80AE-196AFF9E5A0F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{17BB8AB6-D307-4A1F-9D1E-8466BE51A0A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17BB8AB6-D307-4A1F-9D1E-8466BE51A0A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17BB8AB6-D307-4A1F-9D1E-8466BE51A0A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17BB8AB6-D307-4A1F-9D1E-8466BE51A0A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73E6DDAB-26FD-499C-815C-76796762B288}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73E6DDAB-26FD-499C-815C-76796762B288}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73E6DDAB-26FD-499C-815C-76796762B288}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73E6DDAB-26FD-499C-815C-76796762B288}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD65C106-ED2D-4ADD-846A-45E6717CEB59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD65C106-ED2D-4ADD-846A-45E6717CEB59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD65C106-ED2D-4ADD-846A-45E6717CEB59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD65C106-ED2D-4ADD-846A-45E6717CEB59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CAAF1D2-5601-4297-80AE-196AFF9E5A0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CAAF1D2-5601-4297-80AE-196AFF9E5A0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CAAF1D2-5601-4297-80AE-196AFF9E5A0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CAAF1D2-5601-4297-80AE-196AFF9E5A0F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{17BB8AB6-D307-4A1F-9D1E-8466BE51A0A3} = {2A28F5B9-98B2-4930-A839-C464A465F218}
+		{73E6DDAB-26FD-499C-815C-76796762B288} = {BED927F5-5B50-426F-9D08-E06A0AC95C1D}
+		{DD65C106-ED2D-4ADD-846A-45E6717CEB59} = {99098519-2473-4522-99A2-1820392B7B81}
+		{9CAAF1D2-5601-4297-80AE-196AFF9E5A0F} = {01A1CFE3-7E7A-435E-BB9D-F79492F3FF51}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {63D12BC7-6CB9-47AE-9173-8D1E38B1577F}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MD3.CatalogoSaaS.Model.Sistema">
+    <Position X="5.5" Y="5" Width="2" />
+    <Members>
+      <Property Name="ConfiguracoesDoSistemaFacade" Hidden="true" />
+      <Property Name="Contas" Hidden="true" />
+      <Property Name="ParametrosFacade" Hidden="true" />
+      <Property Name="PlanosFacade" Hidden="true" />
+    </Members>
+    <AssociationLine Name="Planos" Type="MD3.CatalogoSaaS.Model.PlanoDoSistema" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.5" Y="6.981" />
+        <Point X="8.5" Y="6.981" />
+        <Point X="8.5" Y="6.25" />
+        <Point X="9.042" Y="6.25" />
+        <Point X="9.042" Y="6.5" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.717" Y="-0.881" Height="0.182" Width="0.701" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Parametros" Type="MD3.CatalogoSaaS.Model.ParametroDoSistema" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.5" Y="7.07" />
+        <Point X="4.344" Y="7.07" />
+        <Point X="4.344" Y="6.167" />
+        <Point X="3.094" Y="6.167" />
+        <Point X="3.094" Y="6.5" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-2.274" Y="-0.88" Height="0.182" Width="0.983" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="ConfiguracoesDoSistema" Type="MD3.CatalogoSaaS.Model.ConfiguracaoDeSistema">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.12" Y="0.81" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAACAAIABABBACAEAAEAAAIAAwAAAIAEAAAEAgMIgAA=</HashCode>
+      <FileName>Sistema.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Contas" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Planos" />
+      <Property Name="Parametros" />
+      <Property Name="ConfiguracoesDoSistema" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="MD3.CatalogoSaaS.Model.Tenant">
+    <Position X="11.5" Y="1.75" Width="2" />
+    <Members>
+      <Property Name="Contas" Hidden="true" />
+      <Property Name="FilhosFacade" Hidden="true" />
+      <Property Name="Pai" Hidden="true" />
+      <Property Name="Pai_Id" Hidden="true" />
+    </Members>
+    <AssociationLine Name="Filhos" Type="MD3.CatalogoSaaS.Model.Tenant" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="12" Y="4.844" />
+        <Point X="12" Y="5.094" />
+        <Point X="13.062" Y="5.094" />
+        <Point X="13.062" Y="4.844" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.215" Y="0.279" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>QAACAAAAAAAAAiAAAAEAAAAABQAABgAQAAAAQAEIgAA=</HashCode>
+      <FileName>Tenant.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Filhos" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="MD3.CatalogoSaaS.Model.PlanoDoSistema">
+    <Position X="8.75" Y="6.5" Width="1.75" />
+    <Members>
+      <Property Name="Contas" Hidden="true" />
+      <Property Name="Sistema" Hidden="true" />
+      <Property Name="Sistema_Id" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAABACAAAAEBAAAAAAAAAIAAAAAAAAEAgAA=</HashCode>
+      <FileName>PlanoDoSistema.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Sistema" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="MD3.CatalogoSaaS.Model.ParametroDoSistema">
+    <Position X="2" Y="6.5" Width="1.75" />
+    <Members>
+      <Property Name="ConfiguracoesNasContas" Hidden="true" />
+      <Property Name="ConfiguracoesNosSistemas" Hidden="true" />
+      <Property Name="Sistema" Hidden="true" />
+      <Property Name="Sistema_Id" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAGAAAAAAAAASAAAAFBAAAAAAAAAIAAAAgAAAAAAAA=</HashCode>
+      <FileName>ParametroDoSistema.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Sistema" />
+      <Property Name="ConfiguracoesNasContas" />
+      <Property Name="ConfiguracoesNosSistemas" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="MD3.CatalogoSaaS.Model.ContaDeSistema">
+    <Position X="5.5" Y="0.5" Width="2" />
+    <Members>
+      <Property Name="ConfiguracoesDaContaFacade" Hidden="true" />
+      <Property Name="UsuariosFacade" Hidden="true" />
+    </Members>
+    <AssociationLine Name="Tenant" Type="MD3.CatalogoSaaS.Model.Tenant" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.5" Y="2.188" />
+        <Point X="7.875" Y="2.188" />
+        <Point X="7.875" Y="2.182" />
+        <Point X="11.105" Y="2.182" />
+        <Point X="11.105" Y="3.223" />
+        <Point X="11.5" Y="3.223" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="3.204" Y="1.154" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Sistema" Type="MD3.CatalogoSaaS.Model.Sistema" FixedFromPoint="true">
+      <Path>
+        <Point X="6.312" Y="3.401" />
+        <Point X="6.312" Y="5" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.1" Y="1.331" Height="0.182" Width="0.733" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Plano" Type="MD3.CatalogoSaaS.Model.PlanoDoSistema" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.75" Y="3.401" />
+        <Point X="6.75" Y="4.474" />
+        <Point X="9.802" Y="4.474" />
+        <Point X="9.802" Y="6.5" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="2.267" Y="2.831" Height="0.182" Width="0.66" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Usuarios" Type="MD3.CatalogoSaaS.Model.Usuario" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.5" Y="3.125" />
+        <Point X="10.542" Y="3.125" />
+        <Point X="10.542" Y="5.771" />
+        <Point X="12.667" Y="5.771" />
+        <Point X="12.667" Y="6.75" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="4.279" Y="3.715" Height="0.182" Width="0.805" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="ConfiguracoesDaConta" Type="MD3.CatalogoSaaS.Model.ConfiguracaoDeConta">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.329" Y="0.102" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAABAACAAAAEBEAAABAAAAAEEAIAAAgAEQgA=</HashCode>
+      <FileName>ContaDeSistema.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Tenant" />
+      <Property Name="Sistema" />
+      <Property Name="Plano" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Usuarios" />
+      <Property Name="ConfiguracoesDaConta" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="MD3.CatalogoSaaS.Model.ConfiguracaoDeSistema">
+    <Position X="5.5" Y="10" Width="2" />
+    <Members>
+      <Property Name="Sistema" Hidden="true" />
+      <Property Name="Sistema_Id" Hidden="true" />
+    </Members>
+    <AssociationLine Name="Parametro" Type="MD3.CatalogoSaaS.Model.ParametroDoSistema">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-2.067" Y="1.831" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAACAAAAEBAAAGAAAAAIAAgAAAAAAAAAA=</HashCode>
+      <FileName>ConfiguracaoDeSistema.cs</FileName>
+      <NewMemberFileName>ConfiguracaoDeConta.cs</NewMemberFileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Parametro" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="MD3.CatalogoSaaS.Model.Usuario">
+    <Position X="11.5" Y="6.75" Width="2" />
+    <Members>
+      <Property Name="Contas" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AwACAAAAACAAACJgBAAAACQAAAEAAAAAAAAAAAEEgAA=</HashCode>
+      <FileName>Usuario.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Contas" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="MD3.CatalogoSaaS.Model.ConfiguracaoDeConta">
+    <Position X="1.5" Y="2" Width="2" />
+    <Members>
+      <Property Name="Conta" Hidden="true" />
+      <Property Name="Conta_Id" Hidden="true" />
+    </Members>
+    <AssociationLine Name="Parametro" Type="MD3.CatalogoSaaS.Model.ParametroDoSistema">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.089" Y="2.081" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAEAAAAGAAQAAAAAgAAAAAAAgAA=</HashCode>
+      <FileName>ConfiguracaoDeConta.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Parametro" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

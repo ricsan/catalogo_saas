@@ -1,0 +1,67 @@
+﻿@page
+@model MD3.CatalogoSaaS.Adm.Pages.UsuarioRoot.Usuarios.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Usuários</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Usuario[0].Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Usuario[0].Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Usuario[0].Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Usuario[0].DataDeCadastro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Usuario[0].DataDeAlteracao)
+            </th>
+            @*<th>
+                @Html.DisplayNameFor(model => model.Usuario[0].IdpIds)
+            </th>*@
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Usuario)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DataDeCadastro)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DataDeAlteracao)
+                </td>
+                @*<td>
+                    @Html.DisplayFor(modelItem => item.IdpIds)
+                </td>*@
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

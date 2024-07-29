@@ -1,0 +1,44 @@
+﻿@page
+@model MD3.CatalogoSaaS.Adm.Pages.SistemaRoot.Configuracoes.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>ConfiguracaoDeSistema</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ConfiguracaoDeSistema.Sistema_Id" class="control-label"></label>
+                <input hidden asp-for="ConfiguracaoDeSistema.Sistema_Id" value="@ViewBag.sistemaId" />
+                <span class="form-control">@ViewBag.Sistema</span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConfiguracaoDeSistema.Parametro_Id" class="control-label"></label>
+                <select asp-for="ConfiguracaoDeSistema.Parametro_Id" class="form-control" asp-items="ViewBag.Parametro_Id"></select>
+                <span asp-validation-for="ConfiguracaoDeSistema.Parametro_Id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConfiguracaoDeSistema.Valor" class="control-label"></label>
+                <input asp-for="ConfiguracaoDeSistema.Valor" class="form-control" />
+                <span asp-validation-for="ConfiguracaoDeSistema.Valor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index" asp-route-sistemaId="@ViewBag.sistemaId">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

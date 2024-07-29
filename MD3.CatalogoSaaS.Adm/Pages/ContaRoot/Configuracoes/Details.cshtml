@@ -1,0 +1,37 @@
+﻿@page
+@model MD3.CatalogoSaaS.Adm.Pages.ContaRoot.Configuracoes.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>ConfiguracaoDeConta</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ConfiguracaoDeConta.Conta)
+        </dt>
+        <dd class="col-sm-10">
+            @($"{Model.ConfiguracaoDeConta.Conta.Id} ({Model.ConfiguracaoDeConta.Conta.Tenant.Nome})")
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ConfiguracaoDeConta.Parametro)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ConfiguracaoDeConta.Parametro.CodigoUnico)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ConfiguracaoDeConta.Valor)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ConfiguracaoDeConta.Valor)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-parametroId="@Model.ConfiguracaoDeConta?.Parametro_Id" asp-route-contaId="@ViewBag.contaId">Edit</a> |
+    <a asp-page="./Index" asp-route-contaId="@ViewBag.contaId">Back to List</a>
+</div>

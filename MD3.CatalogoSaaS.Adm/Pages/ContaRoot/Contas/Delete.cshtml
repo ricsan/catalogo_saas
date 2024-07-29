@@ -1,0 +1,40 @@
+﻿@page
+@model MD3.CatalogoSaaS.Adm.Pages.ContasRoot.Contas.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>ContaDeSistema</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ContaDeSistema.Tenant)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ContaDeSistema.Tenant.Nome)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ContaDeSistema.Sistema)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ContaDeSistema.Sistema.Nome)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ContaDeSistema.Plano)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ContaDeSistema.Plano.Nome)
+        </dd>
+    </dl>
+
+    <form method="post">
+        <input type="hidden" asp-for="ContaDeSistema.Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>
